@@ -1,3 +1,4 @@
 # step
-** Step desde cero con css y jquery ***
-** responsive ***
+** Step  desde cero con css y jquery ***
+Responsive
+* Requerimientos:
