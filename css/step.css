@@ -1,0 +1,113 @@
+h1{
+   color: #444;
+   text-align: center;
+}
+
+.secuencia {
+   position: relative;
+}
+
+.secuencia--steps {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   height: 100px;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   margin: 0 auto;
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 70%;
+   width: 80%;
+}
+
+.secuencia--steps--linea {
+   background-color: olive;
+   display: inline-block;
+   height: 5px;
+   position: absolute;
+   top: 12px;
+   left: 5px;
+   -webkit-transition: all .3s;
+   transition: all .3s;
+   width: 0;
+}
+
+.secuencia--steps--item {
+   background-color: olive;
+   border-radius: 50%;
+   font-family: sans-serif;
+   height: 30px;
+   position: relative;
+   text-align: center;
+   -webkit-transition: all 1s;
+   transition: all 1s;
+   width: 30px;
+   z-index: 0;
+   cursor: pointer;
+}
+
+.secuencia--steps--item:after {
+   background-color: peru;
+   border-radius: 50%;
+   content: '';
+   display: inline-block;
+   height: 20px;
+   position: absolute;
+   top: 5px;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   width: 20px;
+   -webkit-transition: all .3s;
+   transition: all .3s;
+   -webkit-transform: scale(1);
+   transform: scale(1);
+   z-index: 1;
+}
+
+.secuencia--steps--item .item--numero {
+   color: #fff;
+   font-size: 12px;
+   font-size: .7rem;
+   position: absolute;
+   top: 5px;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   opacity: 0;
+   -webkit-transition: all .3s;
+   transition: all .3s;
+   z-index: 2;
+}
+
+.secuencia--steps--item:hover {
+   background-color: #fff;
+}
+
+.secuencia--steps--item__active:after {
+   -webkit-transform: scale(3);
+   transform: scale(3);
+}
+
+.secuencia--steps--item__active .item--numero {
+   opacity: 1;
+}
+
+@media (max-width: 480px) {
+   .secuencia--steps--item__active:after {
+      -webkit-transform: scale(2.2);
+      transform: scale(2.2);
+   }
+}
+
+.secuencia--foto img {
+   display: none;
+   width: 100%;
+}
+
+.secuencia--foto img:first-child {
+   display: inherit;
+}
